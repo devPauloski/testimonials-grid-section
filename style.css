@@ -51,6 +51,7 @@ body {
   background-color: var(--clr-grey-100);
 }
 
+
 /* Main Content */
 main {
   margin-block: 4.5rem;
@@ -154,10 +155,6 @@ section {
   border: 2px solid var(--clr-purple-300);
 }
 
-.meta-data > p:first {
-  margin-block-end: 4px;
-}
-
 .meta-data > p:nth-child(2) {
   font-weight: 400;
 }
@@ -166,6 +163,12 @@ section h2 {
   font-size: 1.25rem;
   font-weight: var(--fw-semibold);
   max-inline-size: 50ch;
+}
+
+section p {
+  max-inline-size: 60ch;
+  text-wrap: pretty;
+  line-height: 1.65;
 }
 
 .daniel-testimonial {
