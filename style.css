@@ -51,7 +51,6 @@ body {
   background-color: var(--clr-grey-100);
 }
 
-
 /* Main Content */
 main {
   margin-block: 4.5rem;
@@ -131,7 +130,10 @@ main {
 }
 
 section {
-  padding: 1.875rem;
+  /* @link https://utopia.fyi/clamp/calculator?a=320,1240,16—30&p=space */
+  --space-16-30:  clamp(1rem, 0.6957rem + 1.5217vw, 1.875rem);
+
+  padding: var(--space-16-30);
   border-radius: .5rem;
   display: flex;
   flex-direction: column;
@@ -143,6 +145,7 @@ section {
   display: flex;
   align-items: center;
   gap: .75rem;
+  flex-wrap: wrap;
 }
 
 .flex-group img {
@@ -160,15 +163,17 @@ section {
 }
 
 section h2 {
-  font-size: 1.25rem;
+  /* @link https://utopia.fyi/clamp/calculator?a=320,1240,16—20&p=fs */
+  --fs-18-20: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+
+  font-size: var(--fs-18-20);
   font-weight: var(--fw-semibold);
   max-inline-size: 50ch;
 }
 
 section p {
-  max-inline-size: 60ch;
+  max-inline-size: 68ch;
   text-wrap: pretty;
-  line-height: 1.65;
 }
 
 .daniel-testimonial {
